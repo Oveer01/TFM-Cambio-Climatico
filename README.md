@@ -41,11 +41,10 @@ Para replicar y extender el análisis del proyecto se recomienda contar con:
 - **Librerías:** 
   - Pandas
   - NumPy
-  - Matplotlib
-  - Scikit-learn (para análisis predictivo, si se utiliza)
+  - Pymysql
   - Otras dependencias que se especificarán en un archivo `requirements.txt`
 
-Se sugiere la utilización de entornos virtuales y Jupyter Notebook o JupyterLab para explorar y ejecutar los scripts de análisis.
+Iutilización de entornos virtuales y Jupyter Notebook o JupyterLab para explorar y ejecutar los scripts de análisis.
 
 ## Conclusión
 
