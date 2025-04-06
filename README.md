@@ -1,3 +1,16 @@
+# Configuracion de entorno python para el correcto funcionamiento
+# 1: abrir una terminal en vscode y ejecutar lo siguiente 
+python -m venv venv
+
+venv\Scripts\activate
+# 1.1: si el segundo comando falla ejecutar esta linea como admionistrador en windows powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# 2 una vez activado el entorno ejecutamos la instalacion nde librerias
+pip install -r requirements.txt
+
+# 3: LISTO!!! ya tienes configurado tu entorno
+
 # TFM: Impacto del Cambio Climático a través de Indicadores de Desarrollo
 
 ## Introducción

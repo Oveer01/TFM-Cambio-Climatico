@@ -1,2 +1,4 @@
 # dotenv: Ignorar el archivo .env
 .env
+venv/
+venv/Lib/site-packages/decorator.py
