@@ -4,3 +4,5 @@ datetime
 pymysql
 python-dotenv
 matplotlib
+openpyxl
+xlrd
