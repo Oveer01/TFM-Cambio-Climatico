@@ -1,70 +1,124 @@
-# Configuracion de entorno python para el correcto funcionamiento
-# 1: abrir una terminal en vscode y ejecutar lo siguiente 
-python -m venv venv
-
-venv\Scripts\activate
-# 1.1: si el segundo comando falla ejecutar esta linea como admionistrador en windows powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-
-# 2 una vez activado el entorno ejecutamos la instalacion nde librerias
-pip install -r requirements.txt
-
-# 3: LISTO!!! ya tienes configurado tu entorno
-
 # TFM: Impacto del Cambio Climático a través de Indicadores de Desarrollo
 
-## Introducción
+![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg) ![Licencia](https://img.shields.io/badge/licencia-MIT-green.svg)
 
-El cambio climático es uno de los mayores desafíos del siglo XXI. Este trabajo fin de máster se centra en analizar cómo los indicadores económicos y de desarrollo de los países se relacionan con el cambio climático, poniendo especial atención en las emisiones de CO₂, las variaciones en la temperatura global y el potencial de las energías renovables para mitigar estos efectos.
+Este repositorio contiene el proyecto del Trabajo Fin de Máster (TFM) titulado **"Impacto del Cambio Climático a través de Indicadores de Desarrollo"**. El objetivo es integrar y analizar datos de distintas fuentes para explorar la relación entre indicadores económicos, emisiones de CO₂, variaciones de temperatura y la adopción de energías renovables.
 
-## Motivación
+---
 
-El progreso humano, si bien ha traído innumerables beneficios, también ha contribuido significativamente al deterioro del medio ambiente. Este proyecto surge de la necesidad de comprender las interacciones entre el desarrollo económico y el impacto ambiental, y de evidenciar cómo la transición hacia fuentes de energía renovables puede representar una solución sostenible frente al calentamiento global.
+## 📁 Estructura del proyecto
 
-## Objetivos
+```
+TFM-CAMBIO-CLIMATICO/
+│
+├── data/                          # Conjunto de datos originales y procesados
+│   ├── API_AG.LND.TOTL2_DS2_en_excel_v2_85542.xls
+│   ├── API_NY.GDP.MKTP.CD_DS2_en_excel_v2_85096.xls
+│   ├── API_SP.POP.TOTL_DS2_en_excel_v2_85347.xls
+│   ├── Environment_Temperature_change_E_All_Data_NOFLAG.csv
+│   ├── FAOSTAT_data_1-10-2022.csv
+│   ├── FAOSTAT_data_11-24-2020.csv
+│   ├── FAOSTAT_data_en_11-1-2024.csv
+│   ├── P_Data_Extract_From_World_Development_Indicators.xlsx
+│   ├── Pa_sos.csv
+│   └── tidy_format_co2_emission_dataset.csv
+│
+├── docs/                          # Documentación y diagramas
+│   ├── BBDD_Cambio_climatico.xlsx
+│   ├── DiagramaEntidadRelacion.png
+│   └── Primera_entrega_TFM_Diccionario_de_datos.docx
+│
+├── notebooks/                     # Notebooks de análisis y carga de datos
+│   ├── analisis/                  # Exploración y mapeo de datos
+│   │   └── mapeado_de_datos.ipynb
+│   ├── creacion/                  # Scripts para generar la base de datos
+│   │   └── crear_base_datos.ipynb
+│   └── insercion/                 # Inserción de datos por dominio
+│       ├── 01_insertar_datos_paises.ipynb
+│       ├── 02_insertar_datos_temperatura.ipynb
+│       ├── 03_insertar_datos_emisionesCO2.ipynb
+│       ├── 04_insertar_datos_economicos.ipynb
+│       └── 05_insertar_datos_demograficos.ipynb
+│
+├── .env.example                   # Ejemplo de variables de entorno
+├── .gitignore                     # Archivos y carpetas ignorados por Git
+├── requirements.txt               # Dependencias del proyecto
+└── README.md                      # Documentación principal
+```
 
-- **Analizar tendencias globales de emisiones de CO₂:** Investigar cómo varían las emisiones en función de los indicadores económicos y de desarrollo.
-- **Explorar cambios en la temperatura global:** Evaluar la influencia de la actividad humana en las variaciones de la temperatura a nivel planetario.
-- **Investigar el papel de las energías renovables:** Determinar el impacto de la adopción de energías renovables en la mitigación del cambio climático.
-- **Relacionar indicadores de desarrollo y cambio climático:** Estudiar la correlación entre el desarrollo de un país y su contribución o vulnerabilidad frente al cambio climático.
+---
 
-## Metodología
+## 🚀 Instalación y configuración
 
-Para alcanzar estos objetivos se realizará una integración y análisis de datos provenientes de fuentes internacionales reconocidas, tales como:
+1. **Clonar el repositorio**
 
-- **World Development Indicators (Banco Mundial):** Proporciona datos económicos y de desarrollo por país.
-- **Emisiones de CO₂:** Datos disponibles en plataformas como Kaggle que permiten rastrear las emisiones a lo largo del tiempo.
-- **Cambios en la temperatura:** Series históricas de datos de temperatura para evaluar tendencias.
-- **Energías renovables:** Estadísticas y reportes de organismos como IRENA que analizan la penetración de energías limpias en la matriz energética.
+   ```bash
+   git clone https://github.com/usuario/TFM-CAMBIO-CLIMATICO.git
+   cd TFM-CAMBIO-CLIMATICO
+   ```
 
-Se utilizarán técnicas de análisis exploratorio y modelado estadístico para detectar patrones y relaciones significativas entre estas variables.
+2. **Crear y activar un entorno virtual** (recomendado Python 3.9+):
 
-## Estructura del Proyecto
+   * En Windows PowerShell:
 
-- **Documentación:** Este README y otros documentos que explican la justificación y el alcance del proyecto.
-- **Datos:** Conjunto de datos recopilados de diversas fuentes internacionales, organizados y documentados para facilitar su análisis.
-- **Análisis:** Scripts y notebooks en Python que contienen el procesamiento, análisis y visualización de los datos.
-- **Resultados:** Sección dedicada a la interpretación de los hallazgos y la discusión sobre su implicancia en el debate del cambio climático.
-- **Conclusiones y Recomendaciones:** Reflexiones finales y sugerencias de políticas públicas y acciones futuras basadas en los resultados obtenidos.
+     ```powershell
+     python -m venv venv
+     .\venv\Scripts\Activate.ps1
+     # Si falla por políticas de ejecución:
+     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+     .\venv\Scripts\Activate.ps1
+     ```
 
-## Requisitos y Ejecución
+   * En macOS/Linux:
 
-Para replicar y extender el análisis del proyecto se recomienda contar con:
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
 
-- **Librerías:** 
-  - Pandas
-  - NumPy
-  - Pymysql
-  - Otras dependencias que se especificarán en un archivo `requirements.txt`
+3. **Instalar dependencias**
 
-Iutilización de entornos virtuales y Jupyter Notebook o JupyterLab para explorar y ejecutar los scripts de análisis.
+   ```bash
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
 
-## Conclusión
+4. **Variables de entorno**
 
-Este TFM tiene como propósito aportar una visión multidimensional sobre el cambio climático, combinando análisis de indicadores económicos y ambientales para fundamentar la importancia de una transición hacia energías renovables. Se espera que los resultados obtenidos ofrezcan una base sólida para la formulación de estrategias de mitigación y adaptación ante los efectos del calentamiento global.
+   * Copiar `.env.example` a `.env` y completar con tus credenciales (por ejemplo, conexión a la base de datos).
 
-## Contacto
+---
 
-Para dudas, comentarios o colaboraciones, por favor contacta con el autor del proyecto.
+## 🛠️ Uso
 
-*Este proyecto se desarrolla como parte del Trabajo Fin de Máster en INESDI.*
+* **Preparar la base de datos**:
+
+  1. Configurar cadena de conexión en `.env`.
+  2. Ejecutar el notebook `notebooks/creacion/crear_base_datos.ipynb` para crear las tablas.
+
+* **Cargar datos**:
+  Ejecutar secuencialmente los notebooks en `notebooks/insercion/`:
+
+  1. `01_insertar_datos_paises.ipynb`
+  2. `02_insertar_datos_temperatura.ipynb`
+  3. `03_insertar_datos_emisionesCO2.ipynb`
+  4. `04_insertar_datos_economicos.ipynb`
+  5. `05_insertar_datos_demograficos.ipynb`
+
+* **Análisis exploratorio**:
+  Abrir `notebooks/analisis/mapeado_de_datos.ipynb` para visualizar, limpiar y combinar los datos.
+
+---
+
+## 🎯 Objetivos y metodología
+
+* **Análisis de emisiones de CO₂** en función de indicadores económicos y demográficos.
+* **Evaluación de series de temperatura** para identificar tendencias globales.
+* **Impacto de energías renovables** en la mitigación del cambio climático.
+* **Relaciones estadísticas** entre desarrollo socioeconómico y vulnerabilidad/clima.
+
+Los datos provienen de fuentes como World Bank (WDI), FAOSTAT, Kaggle, y reportes de IRENA. Se emplean técnicas de análisis exploratorio y modelado estadístico en Python (pandas, NumPy, SQLAlchemy, etc.).
+
+---
+
+*Este proyecto forma parte del Trabajo Fin de Máster en INESDI.*
