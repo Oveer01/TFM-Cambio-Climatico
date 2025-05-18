@@ -85,7 +85,7 @@ TFM-CAMBIO-CLIMATICO/
 
 4. **Variables de entorno**
 
-   * Copiar `.env.example` a `.env` y completar con tus credenciales (por ejemplo, conexión a la base de datos).
+   * Copiar `.env.example` a `.env` y completar con tus credenciales.
 
 ---
 
