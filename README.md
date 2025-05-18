@@ -53,8 +53,8 @@ TFM-CAMBIO-CLIMATICO/
 1. **Clonar el repositorio**
 
    ```bash
-   git clone https://github.com/usuario/TFM-CAMBIO-CLIMATICO.git
-   cd TFM-CAMBIO-CLIMATICO
+   git clone https://github.com/Oveer01/TFM-Cambio-Climatico.git
+   cd TFM-Cambio-Climatico
    ```
 
 2. **Crear y activar un entorno virtual** (recomendado Python 3.9+):
