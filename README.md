@@ -2,13 +2,6 @@
 
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg) ![Licencia](https://img.shields.io/badge/licencia-MIT-green.svg)
 
-**Equipo:**
-- Rafael Jesús Cadavieco Guiral  
-- Javier Calle Olivier  
-- Karla Lorena Figueroa Contreras  
-- Conrado Cristian Hidalgo Gutiérrez  
-- David Pino Peña  
-
 Este repositorio contiene el proyecto del Trabajo Fin de Máster (TFM) titulado **"Impacto del Cambio Climático a través de Indicadores de Desarrollo"**. El objetivo es integrar y analizar datos de distintas fuentes para explorar la relación entre indicadores económicos, emisiones de CO₂, variaciones de temperatura y la adopción de energías renovables.
 
 ---
@@ -46,7 +39,6 @@ TFM-CAMBIO-CLIMATICO/
 │       ├── 03_insertar_datos_emisionesCO2.ipynb
 │       ├── 04_insertar_datos_economicos.ipynb
 │       └── 05_insertar_datos_demograficos.ipynb
-|       └── 06_insertar_datos_catastrofes_ naturales.ipynb
 │
 ├── .env.example                   # Ejemplo de variables de entorno
 ├── .gitignore                     # Archivos y carpetas ignorados por Git
@@ -112,8 +104,6 @@ TFM-CAMBIO-CLIMATICO/
   3. `03_insertar_datos_emisionesCO2.ipynb`
   4. `04_insertar_datos_economicos.ipynb`
   5. `05_insertar_datos_demograficos.ipynb`
-  6. `06_insertar_datos_catastrofes_naturales.ipynb`
-
 
 * **Análisis exploratorio**:
   Abrir `notebooks/analisis/mapeado_de_datos.ipynb` para visualizar, limpiar y combinar los datos.
