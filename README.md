@@ -36,17 +36,20 @@ TFM-CAMBIO-CLIMATICO/
 │   └── Primera_entrega_TFM_Diccionario_de_datos.docx
 │
 ├── notebooks/                     # Notebooks de análisis y carga de datos
-│   ├── analisis/                  # Exploración y mapeo de datos
-│   │   └── mapeado_de_datos.ipynb
+│   ├── analisis/                  # Exploración y visualización
+│   │   ├── mapeado_de_datos.ipynb
+│   │   ├── analisis_categorias.ipynb
+│   │   ├── analisis_indicadores.ipynb
+│   │   └── analisis_paises.ipynb
 │   ├── creacion/                  # Scripts para generar la base de datos
 │   │   └── crear_base_datos.ipynb
-│   └── insercion/                 # Inserción de datos por dominio
+│   └── inserccion/                # Inserción de datos por dominio
 │       ├── 01_insertar_datos_paises.ipynb
 │       ├── 02_insertar_datos_temperatura.ipynb
 │       ├── 03_insertar_datos_emisionesCO2.ipynb
 │       ├── 04_insertar_datos_economicos.ipynb
-│       └── 05_insertar_datos_demograficos.ipynb
-|       └── 06_insertar_datos_catastrofes_ naturales.ipynb
+│       ├── 05_insertar_datos_demograficos.ipynb
+│       └── 06_insertar_datos_catastrofes_ naturales.ipynb
 │
 ├── .env.example                   # Ejemplo de variables de entorno
 ├── .gitignore                     # Archivos y carpetas ignorados por Git
@@ -105,7 +108,7 @@ TFM-CAMBIO-CLIMATICO/
   2. Ejecutar el notebook `notebooks/creacion/crear_base_datos.ipynb` para crear las tablas.
 
 * **Cargar datos**:
-  Ejecutar secuencialmente los notebooks en `notebooks/insercion/`:
+  Ejecutar secuencialmente los notebooks en `notebooks/inserccion/`:
 
   1. `01_insertar_datos_paises.ipynb`
   2. `02_insertar_datos_temperatura.ipynb`
@@ -116,7 +119,10 @@ TFM-CAMBIO-CLIMATICO/
 
 
 * **Análisis exploratorio**:
-  Abrir `notebooks/analisis/mapeado_de_datos.ipynb` para visualizar, limpiar y combinar los datos.
+  - `notebooks/analisis/mapeado_de_datos.ipynb` para visualizar, limpiar y combinar los datos.
+  - `notebooks/analisis/analisis_categorias.ipynb` para resumen por categorías.
+  - `notebooks/analisis/analisis_indicadores.ipynb` para evaluar indicadores concretos.
+  - `notebooks/analisis/analisis_paises.ipynb` para comparativas entre países.
 
 ---
 
