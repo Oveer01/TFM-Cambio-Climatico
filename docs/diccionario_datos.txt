@@ -1,0 +1,52 @@
+# Diccionario de Datos - TFM Cambio Climático
+
+A continuación se describen los conjuntos de datos utilizados en el proyecto. Todos los ficheros se encuentran en la carpeta `data/`.
+
+## API_AG.LND.TOTL.K2_DS2_en_excel_v2_85542.xls
+- **Fuente:** World Bank - World Development Indicators (WDI).
+- **Descripción:** Área de tierra (km²) por país y año.
+- **Columnas principales:** Country Name, Country Code, Indicator Name, Indicator Code, 1960-2024 (un año por columna).
+
+## API_NY.GDP.MKTP.CD_DS2_en_excel_v2_85096.xls
+- **Fuente:** World Bank - WDI.
+- **Descripción:** Producto Interior Bruto (PIB) en dólares actuales por país y año.
+- **Columnas:** mismas que el fichero anterior.
+
+## API_SP.POP.TOTL_DS2_en_excel_v2_85347.xls
+- **Fuente:** World Bank - WDI.
+- **Descripción:** Población total por país y año.
+- **Columnas:** idénticas al resto de ficheros WDI.
+
+## Environment_Temperature_change_E_All_Data_NOFLAG.csv
+- **Fuente:** FAOSTAT – Temperature change.
+- **Descripción:** Variación de temperatura mensual por área (país), expresada en grados Celsius.
+- **Columnas:** Area Code, Area, Months Code, Months, Element Code, Element, Unit, Y1961‑Y2019.
+
+## FAOSTAT_data_1-10-2022.csv / FAOSTAT_data_en_11-1-2024.csv
+- **Fuente:** FAOSTAT.
+- **Descripción:** Temperatura media mensual por país con indicador de flag/calculado.
+- **Columnas:** Domain, Area Code, Area, Element, Months, Year, Unit, Value, Flag, Flag Description.
+
+## FAOSTAT_data_11-24-2020.csv
+- **Fuente:** FAOSTAT.
+- **Descripción:** Tabla de códigos de países (Country Code, M49, ISO2, ISO3, etc.).
+
+## Indicator_11_1_Physical_Risks_Climate_related_disasters_frequency_7212563912390016675.csv
+- **Fuente:** EM‑DAT (The Emergency Events Database) – CRED/UCLouvain.
+- **Descripción:** Frecuencia de desastres relacionados con el clima y número de personas afectadas por país (1980‑2024).
+- **Columnas:** Country, ISO2, ISO3, Indicator, Unit, Source, serie de años 1980‑2024.
+
+## P_Data_Extract_From_World_Development_Indicators.xlsx
+- **Fuente:** World Bank - WDI.
+- **Descripción:** Extracto de múltiples indicadores energéticos y de gases de efecto invernadero.
+- **Columnas:** Series Code, Series Name, Country Name, Country Code, 1960‑2024.
+
+## Pa_sos.csv
+- **Fuente:** Lista de países (códigos ISO y nombres en varios idiomas).
+- **Columnas:** Codi, Nom, Codi A3, Codi Divisa, Codi Regió UN M49, Continent Nom, Subcontinent Nom, Nom en anglès, Nom en castellà.
+
+## tidy_format_co2_emission_dataset.csv
+- **Fuente:** Kaggle – Global CO2 Emissions.
+- **Descripción:** Emisiones de CO₂ (millones de toneladas) por país y año.
+- **Columnas:** Country, Year, CO2EmissionRate (mt).
+
