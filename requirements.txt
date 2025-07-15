@@ -10,3 +10,5 @@ cryptography
 seaborn
 geopandas
 pycountry
+scipy
+sklearn
