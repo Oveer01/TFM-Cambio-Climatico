@@ -8,3 +8,5 @@ openpyxl
 xlrd
 cryptography
 seaborn
+geopandas
+pycountry
