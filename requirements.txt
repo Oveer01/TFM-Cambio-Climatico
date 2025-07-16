@@ -11,4 +11,4 @@ seaborn
 geopandas
 pycountry
 scipy
-sklearn
+scikit-learn
