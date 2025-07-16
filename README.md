@@ -18,31 +18,44 @@ Este repositorio contiene el proyecto del Trabajo Fin de Máster (TFM) titulado 
 ```
 TFM-CAMBIO-CLIMATICO/
 │
-├── data/                          # Conjunto de datos originales y procesados
-│   ├── API_AG.LND.TOTL2_DS2_en_excel_v2_85542.xls
-│   ├── API_NY.GDP.MKTP.CD_DS2_en_excel_v2_85096.xls
-│   ├── API_SP.POP.TOTL_DS2_en_excel_v2_85347.xls
-│   ├── Environment_Temperature_change_E_All_Data_NOFLAG.csv
-│   ├── FAOSTAT_data_1-10-2022.csv
-│   ├── FAOSTAT_data_11-24-2020.csv
-│   ├── FAOSTAT_data_en_11-1-2024.csv
-│   ├── P_Data_Extract_From_World_Development_Indicators.xlsx
-│   ├── Pa_sos.csv
-│   └── tidy_format_co2_emission_dataset.csv
+├── data/                          # Datos del proyecto
+│   ├── fuentes/                   # Datos fuente para extracción de valores
+│   │   ├── climaticos/            # Datos de temperatura y clima
+│   │   │   ├── FAOSTAT_data_1-10-2022.csv
+│   │   │   ├── FAOSTAT_data_11-24-2020.csv
+│   │   │   ├── FAOSTAT_data_en_11-1-2024.csv
+│   │   │   └── Environment_Temperature_change_E_All_Data_NOFLAG.csv
+│   │   │
+│   │   ├── demograficos/          # Datos demográficos (población, superficie)
+│   │   │   ├── API_SP.POP.TOTL_DS2_en_excel_v2_85347.xls
+│   │   │   └── API_AG.LND.TOTL.K2_DS2_en_excel_v2_85542.xls
+│   │   │
+│   │   ├── economicos/            # Datos económicos (PIB, indicadores de desarrollo)
+│   │   │   ├── API_NY.GDP.MKTP.CD_DS2_en_excel_v2_85096.xls
+│   │   │   └── P_Data_Extract_From_World_Development_Indicators.xlsx
+│   │   │
+│   │   └── paises/                # Datos de países y códigos
+│   │       └── Pa_sos.csv         # Referencia de países y códigos
+│   │
+│   └── visualizacion/             # Datos para visualizaciones y gráficos
+│       └── ne_50m_admin_0_countries/  # Archivos geoespaciales para mapas de países
 │
 ├── docs/                          # Documentación y diagramas
-│   ├── BBDD_Cambio_climatico.xlsx
+│   ├── BBDD Cambio climatico.xlsx
 │   ├── DiagramaEntidadRelacion.png
-│   └── Primera_entrega_TFM_Diccionario_de_datos.docx
+│   ├── diccionario_datos.txt
+│   ├── Modelo_Datos_TFM.docx
+│   └── Primera entrega TFM_ Diccionario de datos.docx
 │
 ├── notebooks/                     # Notebooks de análisis y carga de datos
 │   ├── analisis/                  # Exploración y visualización
-│   │   ├── mapeado_de_datos.ipynb
-│   │   ├── analisis_categorias.ipynb
-│   │   ├── analisis_indicadores.ipynb
-│   │   └── analisis_paises.ipynb
+│   │   ├── 01_analisis_emisiones_economia.ipynb  # Análisis de emisiones y economía
+│   │   ├── 02_analisis_temperatura_global.ipynb  # Análisis de temperatura
+│   │   └── 03_analisis_desarrollo_renovables.ipynb  # Análisis de desarrollo y renovables
+│   │
 │   ├── creacion/                  # Scripts para generar la base de datos
 │   │   └── crear_base_datos.ipynb
+│   │
 │   └── inserccion/                # Inserción de datos por dominio
 │       ├── 01_insertar_datos_paises.ipynb
 │       ├── 02_insertar_datos_temperatura.ipynb
@@ -119,19 +132,21 @@ TFM-CAMBIO-CLIMATICO/
 
 
 * **Análisis exploratorio**:
-  - `notebooks/analisis/mapeado_de_datos.ipynb` para visualizar, limpiar y combinar los datos.
-  - `notebooks/analisis/analisis_categorias.ipynb` para resumen por categorías.
-  - `notebooks/analisis/analisis_indicadores.ipynb` para evaluar indicadores concretos.
-  - `notebooks/analisis/analisis_paises.ipynb` para comparativas entre países.
+  - `notebooks/analisis/01_analisis_emisiones_economia.ipynb` para analizar tendencias globales de emisiones de CO₂ y su relación con indicadores económicos.
+  - `notebooks/analisis/02_analisis_temperatura_global.ipynb` para explorar el impacto del cambio climático en la temperatura del planeta.
+  - `notebooks/analisis/03_analisis_desarrollo_renovables.ipynb` para examinar cómo los indicadores de desarrollo afectan al cambio climático y el papel de las energías renovables.
 
 ---
 
 ## 🎯 Objetivos y metodología
 
-* **Análisis de emisiones de CO₂** en función de indicadores económicos y demográficos.
-* **Evaluación de series de temperatura** para identificar tendencias globales.
-* **Impacto de energías renovables** en la mitigación del cambio climático.
-* **Relaciones estadísticas** entre desarrollo socioeconómico y vulnerabilidad/clima.
+Los objetivos principales de este TFM son:
+
+1. **Analizar tendencias globales de emisiones de CO₂ y su relación con indicadores económicos**
+
+2. **Explorar el impacto del cambio climático en la temperatura del planeta**
+
+3. **Explorar cómo afectan los diferentes indicadores de desarrollo de un país en el cambio climático y evaluar el papel de las energías renovables**
 
 Los datos provienen de fuentes como World Bank (WDI), FAOSTAT, Kaggle, y reportes de IRENA. Se emplean técnicas de análisis exploratorio y modelado estadístico en Python (pandas, NumPy, SQLAlchemy, etc.).
 
