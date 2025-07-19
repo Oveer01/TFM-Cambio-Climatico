@@ -51,18 +51,23 @@ TFM-CAMBIO-CLIMATICO/
 │   ├── analisis/                  # Exploración y visualización
 │   │   ├── 01_analisis_emisiones_economia.ipynb  # Análisis de emisiones y economía
 │   │   ├── 02_analisis_temperatura_global.ipynb  # Análisis de temperatura
-│   │   └── 03_analisis_desarrollo_renovables.ipynb  # Análisis de desarrollo y renovables
+│   │   └── 03_analisis_desarrollo_energias_renovables.ipynb  # Análisis de desarrollo y energías renovables
 │   │
 │   ├── creacion/                  # Scripts para generar la base de datos
 │   │   └── crear_base_datos.ipynb
 │   │
-│   └── inserccion/                # Inserción de datos por dominio
-│       ├── 01_insertar_datos_paises.ipynb
-│       ├── 02_insertar_datos_temperatura.ipynb
-│       ├── 03_insertar_datos_emisionesCO2.ipynb
-│       ├── 04_insertar_datos_economicos.ipynb
-│       ├── 05_insertar_datos_demograficos.ipynb
-│       └── 06_insertar_datos_catastrofes_ naturales.ipynb
+│   ├── inserccion/                # Inserción de datos por dominio
+│   │   ├── 01_insertar_datos_paises.ipynb
+│   │   ├── 02_insertar_datos_temperatura.ipynb
+│   │   ├── 03_insertar_datos_emisionesCO2.ipynb
+│   │   ├── 04_insertar_datos_economicos.ipynb
+│   │   ├── 05_insertar_datos_demograficos.ipynb
+│   │   └── 06_insertar_datos_catastrofes_ naturales.ipynb
+│   │
+│   └── visualizacion/             # Notebooks para generar visualizaciones específicas
+│       ├── 01_visualizacion_emisiones_economia.ipynb  # Visualizaciones de emisiones y economía
+│       ├── 02_visualizacion_temperatura_global.ipynb  # Visualizaciones de temperatura
+│       └── 03_visualizacion_desarrollo_renovables.ipynb  # Visualizaciones de desarrollo y renovables
 │
 ├── .env.example                   # Ejemplo de variables de entorno
 ├── .gitignore                     # Archivos y carpetas ignorados por Git
@@ -134,7 +139,11 @@ TFM-CAMBIO-CLIMATICO/
 * **Análisis exploratorio**:
   - `notebooks/analisis/01_analisis_emisiones_economia.ipynb` para analizar tendencias globales de emisiones de CO₂ y su relación con indicadores económicos.
   - `notebooks/analisis/02_analisis_temperatura_global.ipynb` para explorar el impacto del cambio climático en la temperatura del planeta.
-  - `notebooks/analisis/03_analisis_desarrollo_renovables.ipynb` para examinar cómo los indicadores de desarrollo afectan al cambio climático y el papel de las energías renovables.
+  - `notebooks/analisis/03_analisis_desarrollo_energias_renovables.ipynb` para examinar cómo los indicadores de desarrollo afectan al cambio climático y el papel de las energías renovables.
+
+* **Visualizaciones**:
+  - Ejecutar los notebooks en `notebooks/visualizacion/` para generar gráficos y visualizaciones específicas.
+  - Las visualizaciones utilizan datos de `data/visualizacion/` para crear mapas interactivos y representaciones gráficas avanzadas.
 
 ---
 
